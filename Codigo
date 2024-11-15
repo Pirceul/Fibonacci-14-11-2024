@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main (){
+
+    //Variaveis
+
+        int N;
+        int Primeiro = 0, Segundo = 1, Proximo;
+
+    //Entrada
+
+    printf("Digite o primeiro os termos da sequencia de Fibonacci que deseja calcular: ");
+    scanf("%d", &N);
+    printf("Sequencia de Fibonacci ate o termo %d: \n", N);
+
+        //Loop
+
+            for (int i = 0; i < N; i++)
+            {
+                if (i <= 1)
+                {
+                    Proximo = i;
+                }
+                    else
+                    {
+                        Proximo = Primeiro + Segundo;
+                        Primeiro = Segundo;
+                        Segundo = Proximo;
+                    }
+
+                        printf("%d ", Proximo);
+                    
+            }
+            
+    return 0;
+
+}
